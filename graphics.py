@@ -26,6 +26,12 @@ class Window:
     def close(self):
         self.__running = False
 
+    def clear(self):
+        self.__canvas.delete("all")
+
+    def draw_text(self, text, x, y, size=24, color="black"):
+        self.__canvas.create_text(x, y, text=text, font=("Arial", size), fill=color)
+
 
 class Point:
     def __init__(self, x, y):
